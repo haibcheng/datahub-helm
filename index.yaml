@@ -3,7 +3,7 @@ entries:
   datahub:
   - apiVersion: v2
     appVersion: 0.9.5
-    created: "2022-12-28T12:34:34.65563681Z"
+    created: "2022-12-28T12:37:28.280041458Z"
     dependencies:
     - condition: datahub-gms.enabled
       name: datahub-gms
@@ -30,15 +30,15 @@ entries:
       repository: file://./subcharts/acryl-datahub-actions
       version: 0.2.120
     description: A Helm chart for LinkedIn DataHub
-    digest: 1c9467b5c2df9ff71a90d5d344ee48285a17510dac2bf05e186cb605b894d643
+    digest: 1b0f592eaecc8b2206600750362fb042c7665dc7b8202fe398e516e49e3a7d34
     maintainers:
     - email: datahub@acryl.io
       name: DataHub
     name: datahub
     type: application
     urls:
-    - https://github.com/haibcheng/datahub-helm/releases/download/datahub-0.2.125007/datahub-0.2.125007.tgz
-    version: 0.2.125007
+    - https://github.com/haibcheng/datahub-helm/releases/download/datahub-0.2.125008/datahub-0.2.125008.tgz
+    version: 0.2.125008
   - apiVersion: v2
     appVersion: 0.9.5
     created: "2022-12-27T21:05:23.596257274Z"
@@ -4790,6 +4790,39 @@ entries:
     version: 0.1.2
   datahub-prerequisites:
   - apiVersion: v2
+    created: "2022-12-28T12:37:28.426734191Z"
+    dependencies:
+    - condition: kafka.enabled
+      name: kafka
+      repository: file://./subcharts/kafka
+      version: 0.0.1
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: file://./subcharts/zookeeper
+      version: 0.0.1
+    - condition: schemaRegistry.enabled
+      name: cp-schema-registry
+      repository: file://./subcharts/cp-schema-registry
+      version: 0.0.1
+    - condition: elasticsearch.enabled
+      name: elasticsearch
+      repository: https://helm.elastic.co
+      version: 7.17.3
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 11.2.6
+    description: A Helm chart for packages that Datahub depends on
+    digest: 23b06eb0799c390dc294f063abb9503ab9fae56752de1a75f98716966c45e80d
+    maintainers:
+    - email: datahub@acryl.io
+      name: DataHub
+    name: datahub-prerequisites
+    type: application
+    urls:
+    - https://github.com/haibcheng/datahub-helm/releases/download/datahub-prerequisites-0.0.12008/datahub-prerequisites-0.0.12008.tgz
+    version: 0.0.12008
+  - apiVersion: v2
     created: "2022-12-23T15:52:49.082582156Z"
     dependencies:
     - condition: elasticsearch.enabled
@@ -5202,4 +5235,4 @@ entries:
     urls:
     - https://github.com/acryldata/datahub-helm/releases/download/datahub-prerequisites-0.0.1/datahub-prerequisites-0.0.1.tgz
     version: 0.0.1
-generated: "2022-12-28T12:34:34.657623747Z"
+generated: "2022-12-28T12:37:28.427995287Z"
