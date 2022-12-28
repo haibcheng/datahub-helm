@@ -164,10 +164,10 @@ postgresqlSetupJob:
     runAsUser: 1000
   podAnnotations: {}
   # Optionally set a set-up job specific login (defaults to global login)
-  # username: "postgresqlSetupJob-login"
-  # password:
-  #   secretRef: postgresqlSetupJob-secret
-  #   secretKey: postgresqlSetupJob-password
+  username: "postgres"
+  password:
+    secretRef: postgresql-setup-job-secret
+    secretKey: postgresql-setup-job-password
 
 datahubUpgrade:
   enabled: true
