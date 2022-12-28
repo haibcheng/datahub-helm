@@ -3,7 +3,7 @@ entries:
   datahub:
   - apiVersion: v2
     appVersion: 0.9.5
-    created: "2022-12-28T09:31:45.290626666Z"
+    created: "2022-12-28T10:47:42.676740049Z"
     dependencies:
     - condition: datahub-gms.enabled
       name: datahub-gms
@@ -30,15 +30,15 @@ entries:
       repository: file://./subcharts/acryl-datahub-actions
       version: 0.2.120
     description: A Helm chart for LinkedIn DataHub
-    digest: f4777b6101337904ca7318ee67baa38f5e8cb1b40e9099255710f0f80ca1b241
+    digest: 3a52fc17f3711cd98344b50dd89c6050707b265fa7404fd1425e05a16e5c1783
     maintainers:
     - email: datahub@acryl.io
       name: DataHub
     name: datahub
     type: application
     urls:
-    - https://github.com/haibcheng/datahub-helm/releases/download/datahub-0.2.125003/datahub-0.2.125003.tgz
-    version: 0.2.125003
+    - https://github.com/haibcheng/datahub-helm/releases/download/datahub-0.2.125004/datahub-0.2.125004.tgz
+    version: 0.2.125004
   - apiVersion: v2
     appVersion: 0.9.5
     created: "2022-12-27T21:05:23.596257274Z"
@@ -5202,4 +5202,4 @@ entries:
     urls:
     - https://github.com/acryldata/datahub-helm/releases/download/datahub-prerequisites-0.0.1/datahub-prerequisites-0.0.1.tgz
     version: 0.0.1
-generated: "2022-12-28T09:31:45.291843585Z"
+generated: "2022-12-28T10:47:42.678594753Z"
