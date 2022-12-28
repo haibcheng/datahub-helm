@@ -55,7 +55,7 @@ The above commands sets the passwords to "datahub" as an example. Change to any 
 Add datahub helm repo by running the following
 
 ```(shell)
-helm repo add datahub https://helm.datahubproject.io/
+helm repo add datahub https://haibcheng.github.io/datahub-helm/
 ```
 
 Then, deploy the dependencies by running the following
