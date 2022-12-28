@@ -1,5 +1,11 @@
 # Default configuration for pre-requisites to get you started
 # Copy this file and update to the configuration of choice
+kafka:
+  enabled: true
+
+schemaRegistry:
+  enabled: true
+
 elasticsearch:
   enabled: true   # set this to false, if you want to provide your own ES instance.
   replicas: 3
@@ -32,14 +38,8 @@ elasticsearch:
   #       storage: 100M
 
 postgresql:
-  enabled: false
+  enabled: true
   auth:
     # For better security, add postgresql-secrets k8s secret with postgres-password, replication-password and password
     existingSecret: postgresql-secrets
 
-# Bitnami version of Kafka that deploys open source Kafka https://artifacthub.io/packages/helm/bitnami/kafka
-kafka:
-  enabled: true
-
-schemaRegistry:
-  enabled: true

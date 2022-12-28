@@ -10,6 +10,10 @@ dependencies:
     version: 0.0.1
     repository: file://./subcharts/kafka
     condition: kafka.enabled
+  - name: zookeeper
+    version: 0.0.1
+    repository: file://../subcharts/zookeeper
+    condition: zookeeper.enabled
   - name: cp-schema-registry
     version: 0.0.1
     repository: file://./subcharts/cp-schema-registry
