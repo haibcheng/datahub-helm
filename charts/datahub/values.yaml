@@ -124,7 +124,7 @@ kafkaSetupJob:
   podAnnotations: {}
 
 mysqlSetupJob:
-  enabled: true
+  enabled: false
   image:
     repository: acryldata/datahub-mysql-setup
     # tag: "v0.9.3" # defaults to .global.datahub.version
@@ -147,7 +147,7 @@ mysqlSetupJob:
   #   secretKey: mysqlSetupJob-password
 
 postgresqlSetupJob:
-  enabled: false
+  enabled: true
   image:
     repository: acryldata/datahub-postgres-setup
     # tag: "v0.9.3" # defaults to .global.datahub.version
