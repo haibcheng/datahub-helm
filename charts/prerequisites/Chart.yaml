@@ -8,11 +8,11 @@ version: 0.0.12
 dependencies:
   - name: kafka
     version: 0.0.1
-    repository: file://./charts/kafka
+    repository: file://./subcharts/kafka
     condition: kafka.enabled
   - name: cp-schema-registry
     version: 0.0.1
-    repository: file://./charts/cp-schema-registry
+    repository: file://./subcharts/cp-schema-registry
     condition: schemaRegistry.enabled
   - name: elasticsearch
     version: 7.17.3
