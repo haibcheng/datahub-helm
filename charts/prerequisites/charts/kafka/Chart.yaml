@@ -1,0 +1,11 @@
+apiVersion: v2
+appVersion: 3.3.1
+description: A Helm chart for Kafka on Kubernetes
+type: application
+name: kafka
+version: 0.0.1
+dependencies:
+  - name: zookeeper
+    version: 0.0.1
+    repository: file://../zookeeper
+    condition: zookeeper.enabled

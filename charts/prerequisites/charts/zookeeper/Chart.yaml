@@ -1,0 +1,6 @@
+apiVersion: v2
+appVersion: 3.7.1
+description: A Helm chart for Zookeeper on Kubernetes
+type: application
+name: zookeeper
+version: 0.0.1
