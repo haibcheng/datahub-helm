@@ -3,7 +3,7 @@ name: Release Charts
 on:
   push:
     branches:
-      - mats-master
+      - master
 
 jobs:
   release:
