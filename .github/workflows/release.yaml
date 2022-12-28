@@ -3,7 +3,7 @@ name: Release Charts
 on:
   push:
     branches:
-      - master
+      - mats-master
 
 jobs:
   release:
@@ -27,15 +27,11 @@ jobs:
       - name: Add Helm repos
         run: |
           helm repo add elasticsearch https://helm.elastic.co
-          helm repo add neo4j https://neo4j-contrib.github.io/neo4j-helm
-          helm repo add neo4j-community https://equinor.github.io/helm-charts/charts
-          helm repo add mysql https://charts.bitnami.com/bitnami
-          helm repo add cp-helm-charts https://confluentinc.github.io/cp-helm-charts/
-          helm repo add kafka https://charts.bitnami.com/bitnami
+          helm repo add postgresql https://charts.bitnami.com/bitnami
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.2.1
         with:
-          charts_repo_url: https://helm.datahubproject.io
+          charts_repo_url: https://haibcheng.github.io/datahub-helm
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
