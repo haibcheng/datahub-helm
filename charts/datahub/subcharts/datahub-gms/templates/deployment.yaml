@@ -78,23 +78,23 @@ spec:
             failureThreshold: {{ .Values.readinessProbe.failureThreshold }}
           env:
             - name: METADATA_AUDIT_EVENT_NAME
-              value: DataHubMetadataAuditEvent_v4
+              value: {{ .Values.global.kafka.topic.metadataAuditEventName }}
             - name: METADATA_CHANGE_EVENT_NAME
-              value: DataHubMetadataChangeEvent_v4
+              value: {{ .Values.global.kafka.topic.metadataChangeEventName }}
             - name: FAILED_METADATA_CHANGE_EVENT_NAME
-              value: DataHubFailedMetadataChangeEvent_v4
+              value: {{ .Values.global.kafka.topic.failedMetadataChangeEventName }}
             - name: DATAHUB_USAGE_EVENT_NAME
-              value: DataHubUsageEvent_v1
+              value: {{ .Values.global.kafka.topic.datahubUsageEventName }}
             - name: METADATA_CHANGE_LOG_VERSIONED_TOPIC
-              value: DataHubMetadataChangeLog_Versioned_v1
+              value: {{ .Values.global.kafka.topic.metadataChangeLogVersionedTopic }}
             - name: METADATA_CHANGE_LOG_TIMESERIES_TOPIC
-              value: DataHubMetadataChangeLog_Timeseries_v1
+              value: {{ .Values.global.kafka.topic.metadataChangeLogTimeseriesTopic }}
             - name: METADATA_CHANGE_PROPOSAL_TOPIC
-              value: DataHubMetadataChangeProposal_v1
+              value: {{ .Values.global.kafka.topic.metadataChangeProposalTopic }}
             - name: FAILED_METADATA_CHANGE_PROPOSAL_TOPIC
-              value: DataHubFailedMetadataChangeProposal_v1
+              value: {{ .Values.global.kafka.topic.failedMetadataChangeProposalTopic }}
             - name: PLATFORM_EVENT_TOPIC_NAME
-              value: DataHubPlatformEvent_v1
+              value: {{ .Values.global.kafka.topic.platformEventTopicName }}
             {{- if .Values.global.datahub.monitoring.enablePrometheus }}
             - name: ENABLE_PROMETHEUS
               value: "true"

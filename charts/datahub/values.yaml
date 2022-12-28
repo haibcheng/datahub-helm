@@ -177,8 +177,8 @@ datahubUpgrade:
   batchSize: 1000
   batchDelayMs: 100
   noCodeDataMigration:
-    sqlDbType: "MYSQL"
-    # sqlDbType: "POSTGRES"
+    sqlDbType: "POSTGRES"
+    # sqlDbType: "MYSQL"
   podSecurityContext: {}
     # fsGroup: 1000
   securityContext: {}
@@ -220,6 +220,16 @@ global:
       # glue:
       #   region: us-east-1
       #   registry: datahub
+    topic:
+      metadataAuditEventName: DataHubMetadataAuditEvent_v4
+      metadataChangeEventName: DataHubMetadataChangeEvent_v4
+      failedMetadataChangeEventName: DataHubFailedMetadataChangeEvent_v4
+      datahubUsageEventName: DataHubUsageEvent_v1
+      metadataChangeLogVersionedTopic: DataHubMetadataChangeLog_Versioned_v1
+      metadataChangeLogTimeseriesTopic: DataHubMetadataChangeLog_Timeseries_v1
+      metadataChangeProposalTopic: DataHubMetadataChangeProposal_v1
+      failedMetadataChangeProposalTopic: DataHubFailedMetadataChangeProposal_v1
+      platformEventTopicName: DataHubPlatformEvent_v1
 
   neo4j:
     host: "prerequisites-neo4j-community:7474"
