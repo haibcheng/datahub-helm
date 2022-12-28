@@ -77,6 +77,24 @@ spec:
             periodSeconds: {{ .Values.readinessProbe.periodSeconds }}
             failureThreshold: {{ .Values.readinessProbe.failureThreshold }}
           env:
+            - name: METADATA_AUDIT_EVENT_NAME
+              value: DataHubMetadataAuditEvent_v4
+            - name: METADATA_CHANGE_EVENT_NAME
+              value: DataHubMetadataChangeEvent_v4
+            - name: FAILED_METADATA_CHANGE_EVENT_NAME
+              value: DataHubFailedMetadataChangeEvent_v4
+            - name: DATAHUB_USAGE_EVENT_NAME
+              value: DataHubUsageEvent_v1
+            - name: METADATA_CHANGE_LOG_VERSIONED_TOPIC
+              value: DataHubMetadataChangeLog_Versioned_v1
+            - name: METADATA_CHANGE_LOG_TIMESERIES_TOPIC
+              value: DataHubMetadataChangeLog_Timeseries_v1
+            - name: METADATA_CHANGE_PROPOSAL_TOPIC
+              value: DataHubMetadataChangeProposal_v1
+            - name: FAILED_METADATA_CHANGE_PROPOSAL_TOPIC
+              value: DataHubFailedMetadataChangeProposal_v1
+            - name: PLATFORM_EVENT_TOPIC_NAME
+              value: DataHubPlatformEvent_v1
             {{- if .Values.global.datahub.monitoring.enablePrometheus }}
             - name: ENABLE_PROMETHEUS
               value: "true"
