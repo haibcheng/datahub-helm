@@ -3,7 +3,7 @@ entries:
   datahub:
   - apiVersion: v2
     appVersion: 0.9.5
-    created: "2022-12-29T06:05:10.167993053Z"
+    created: "2022-12-29T06:18:30.585536835Z"
     dependencies:
     - condition: datahub-gms.enabled
       name: datahub-gms
@@ -30,15 +30,15 @@ entries:
       repository: file://./subcharts/acryl-datahub-actions
       version: 0.2.120
     description: A Helm chart for LinkedIn DataHub
-    digest: d8235389021d796e018c30e570ed68935b95b97bce86a39cf8fb6b06320a7728
+    digest: 153c2acea25965673ab06e59f5901d4fafe7fad55462ad6ccb0c8cd74bbc9711
     maintainers:
     - email: datahub@acryl.io
       name: DataHub
     name: datahub
     type: application
     urls:
-    - https://github.com/haibcheng/datahub-helm/releases/download/datahub-0.2.125011/datahub-0.2.125011.tgz
-    version: 0.2.125011
+    - https://github.com/haibcheng/datahub-helm/releases/download/datahub-0.2.125012/datahub-0.2.125012.tgz
+    version: 0.2.125012
   - apiVersion: v2
     appVersion: 0.9.5
     created: "2022-12-28T15:17:26.772139605Z"
@@ -4828,7 +4828,7 @@ entries:
     version: 0.1.2
   datahub-prerequisites:
   - apiVersion: v2
-    created: "2022-12-29T06:05:10.384791633Z"
+    created: "2022-12-29T06:18:30.734869503Z"
     dependencies:
     - condition: kafka.enabled
       name: kafka
@@ -4851,15 +4851,15 @@ entries:
       repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
       version: 11.2.6
     description: A Helm chart for packages that Datahub depends on
-    digest: fdbb3499dba4dadf39413f1adb1d13fdfa254c3debdf7e3adb5bbcbaca2a2aad
+    digest: d215e094455fa8407c48ba9390b950ea096e3cb08685fa8adccf159fd6ea2266
     maintainers:
     - email: datahub@acryl.io
       name: DataHub
     name: datahub-prerequisites
     type: application
     urls:
-    - https://github.com/haibcheng/datahub-helm/releases/download/datahub-prerequisites-0.0.12011/datahub-prerequisites-0.0.12011.tgz
-    version: 0.0.12011
+    - https://github.com/haibcheng/datahub-helm/releases/download/datahub-prerequisites-0.0.12012/datahub-prerequisites-0.0.12012.tgz
+    version: 0.0.12012
   - apiVersion: v2
     created: "2022-12-23T15:52:49.082582156Z"
     dependencies:
@@ -5273,4 +5273,4 @@ entries:
     urls:
     - https://github.com/acryldata/datahub-helm/releases/download/datahub-prerequisites-0.0.1/datahub-prerequisites-0.0.1.tgz
     version: 0.0.1
-generated: "2022-12-29T06:05:10.385978828Z"
+generated: "2022-12-29T06:18:30.736111797Z"
