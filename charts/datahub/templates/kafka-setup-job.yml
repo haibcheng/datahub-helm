@@ -60,23 +60,23 @@ spec:
           imagePullPolicy: {{ .Values.kafkaSetupJob.imagePullPolicy | default "IfNotPresent" }}
           env:
             - name: METADATA_AUDIT_EVENT_NAME
-              value: { { .Values.global.kafka.topic.metadataAuditEventName } }
+              value: {{ .Values.global.kafka.topic.metadataAuditEventName }}
             - name: METADATA_CHANGE_EVENT_NAME
-              value: { { .Values.global.kafka.topic.metadataChangeEventName } }
+              value: {{ .Values.global.kafka.topic.metadataChangeEventName }}
             - name: FAILED_METADATA_CHANGE_EVENT_NAME
-              value: { { .Values.global.kafka.topic.failedMetadataChangeEventName } }
+              value: {{ .Values.global.kafka.topic.failedMetadataChangeEventName }}
             - name: DATAHUB_USAGE_EVENT_NAME
-              value: { { .Values.global.kafka.topic.usageEventName } }
+              value: {{ .Values.global.kafka.topic.usageEventName }}
             - name: METADATA_CHANGE_LOG_VERSIONED_TOPIC
-              value: { { .Values.global.kafka.topic.metadataChangeLogVersioned } }
+              value: {{ .Values.global.kafka.topic.metadataChangeLogVersioned }}
             - name: METADATA_CHANGE_LOG_TIMESERIES_TOPIC
-              value: { { .Values.global.kafka.topic.metadataChangeLogTimeseries } }
+              value: {{ .Values.global.kafka.topic.metadataChangeLogTimeseries }}
             - name: METADATA_CHANGE_PROPOSAL_TOPIC
-              value: { { .Values.global.kafka.topic.metadataChangeProposal } }
+              value: {{ .Values.global.kafka.topic.metadataChangeProposal }}
             - name: FAILED_METADATA_CHANGE_PROPOSAL_TOPIC
-              value: { { .Values.global.kafka.topic.failedMetadataChangeProposal } }
+              value: {{ .Values.global.kafka.topic.failedMetadataChangeProposal }}
             - name: PLATFORM_EVENT_TOPIC_NAME
-              value: { { .Values.global.kafka.topic.platformEvent } }
+              value: {{ .Values.global.kafka.topic.platformEvent }}
             - name: KAFKA_ZOOKEEPER_CONNECT
               value: {{ .Values.global.kafka.zookeeper.server | quote }}
             - name: KAFKA_BOOTSTRAP_SERVER
