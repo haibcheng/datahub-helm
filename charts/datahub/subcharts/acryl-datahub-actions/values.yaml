@@ -56,6 +56,7 @@ affinity: {}
 
 actions:
   kafkaAutoOffsetPolicy: "latest"
+  enableTypes: system,udp,cud # system,udp,cud
 
 global:
 

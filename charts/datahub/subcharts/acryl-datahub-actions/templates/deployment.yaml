@@ -63,6 +63,28 @@ spec:
               value: { { .Values.global.kafka.topic.metadataChangeLogVersionedTopic } }
             - name: PLATFORM_EVENT_TOPIC_NAME
               value: { { .Values.global.kafka.topic.platformEventTopicName } }
+            - name: DATAHUB_ACTIONS_TYPES
+              value: { { .Values.actions.enableTypes } }
+            {{- if contains "cud" .Values.actions.enableTypes }}
+            - name: CI_MACHINE_NAME
+              value: { { .Values.global.ci.machineAccountName } }
+            - name: CI_MACHINE_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: { { .Values.global.ci.machineAccountPass.secretRef } }
+                  key: { { .Values.global.ci.machineAccountPass.secretKey } }
+            - name: CI_BEARER_TOKEN_URL
+              value: {{ printf "%s/idb/token/%s/v2/actions/GetBearerToken/invoke" .Values.global.ci.host .Values.global.ci.bearerTokenOrgId }}
+            - name: CI_ACCESS_TOKEN_USER
+              value: { { .Values.global.ci.accessTokenUser } }
+            - name: CI_ACCESS_TOKEN_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: { { .Values.global.ci.accessTokenPass.secretRef } }
+                  key: { { .Values.global.ci.accessTokenPass.secretKey } }
+            - name: CI_ACCESS_TOKEN_URL
+              value: {{ printf "%s/idb/oauth2/v1/access_token" .Values.global.ci.host }}
+            {{- end }}
             - name: DATAHUB_GMS_HOST
               value: {{ printf "%s-%s" .Release.Name "datahub-gms" }}
             - name: DATAHUB_GMS_PORT
