@@ -60,6 +60,7 @@ datahub-frontend:
 
 acryl-datahub-actions:
   enabled: true
+  replicaCount: 2
   image:
     repository: registry-qa.webex.com/mats/datahub-actions
     tag: "0.0.10.221229"
@@ -88,7 +89,7 @@ datahub-ingestion-cron:
     # tag: "v0.9.3" # defaults to .global.datahub.version
 
 elasticsearchSetupJob:
-  enabled: true
+  enabled: false
   image:
     repository: registry-qa.webex.com/mats/datahub-elasticsearch-setup
     tag: "0.9.0" # defaults to .global.datahub.version
@@ -106,7 +107,7 @@ elasticsearchSetupJob:
   podAnnotations: {}
 
 kafkaSetupJob:
-  enabled: true
+  enabled: false
   image:
     repository: registry-qa.webex.com/mats/datahub-kafka-setup
     tag: "0.9.0" # defaults to .global.datahub.version
@@ -147,7 +148,7 @@ mysqlSetupJob:
   #   secretKey: mysqlSetupJob-password
 
 postgresqlSetupJob:
-  enabled: true
+  enabled: false
   image:
     repository: registry-qa.webex.com/mats/datahub-postgres-setup
     tag: "0.9.0"
@@ -170,7 +171,7 @@ postgresqlSetupJob:
   #   secretKey: postgresqlSetupJob-password
 
 datahubUpgrade:
-  enabled: true
+  enabled: false
   image:
     repository: registry-qa.webex.com/mats/datahub-upgrade
     tag: "0.9.0"
