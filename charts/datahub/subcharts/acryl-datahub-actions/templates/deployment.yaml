@@ -60,9 +60,9 @@ spec:
               protocol: TCP
           env:
             - name: METADATA_CHANGE_LOG_VERSIONED_TOPIC_NAME
-              value: { { .Values.global.kafka.topic.metadataChangeLogVersionedTopic } }
+              value: { { .Values.global.kafka.topic.metadataChangeLogVersioned } }
             - name: PLATFORM_EVENT_TOPIC_NAME
-              value: { { .Values.global.kafka.topic.platformEventTopicName } }
+              value: { { .Values.global.kafka.topic.platformEvent } }
             - name: DATAHUB_ACTIONS_TYPES
               value: { { .Values.actions.enableTypes } }
             {{- if contains "cud" .Values.actions.enableTypes }}

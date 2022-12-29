@@ -236,12 +236,12 @@ global:
       metadataAuditEventName: "DataHubMetadataAuditEvent_v4"
       metadataChangeEventName: "DataHubMetadataChangeEvent_v4"
       failedMetadataChangeEventName: "DataHubFailedMetadataChangeEvent_v4"
-      datahubUsageEventName: "DataHubUsageEvent_v1"
-      metadataChangeLogVersionedTopic: "DataHubMetadataChangeLog_Versioned_v1"
-      metadataChangeLogTimeseriesTopic: "DataHubMetadataChangeLog_Timeseries_v1"
-      metadataChangeProposalTopic: "DataHubMetadataChangeProposal_v1"
-      failedMetadataChangeProposalTopic: "DataHubFailedMetadataChangeProposal_v1"
-      platformEventTopicName: "DataHubPlatformEvent_v1"
+      usageEventName: "DataHubUsageEvent_v1"
+      metadataChangeLogVersioned: "DataHubMetadataChangeLog_Versioned_v1"
+      metadataChangeLogTimeseries: "DataHubMetadataChangeLog_Timeseries_v1"
+      metadataChangeProposal: "DataHubMetadataChangeProposal_v1"
+      failedMetadataChangeProposal: "DataHubFailedMetadataChangeProposal_v1"
+      platformEvent: "DataHubPlatformEvent_v1"
 
   neo4j:
     host: "prerequisites-neo4j-community:7474"
