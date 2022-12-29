@@ -199,13 +199,13 @@ global:
   datahub_standalone_consumers_enabled: false
 
   ci:
-    host: https://idbrokerbts.webex.com
-    machineAccountName: CTGWAP-DATAHUB
+    host: "https://idbrokerbts.webex.com"
+    machineAccountName: "CTGWAP-DATAHUB"
     machineAccountPass:
       secretRef: ci-secrets
       secretKey: machine-account-pass
-    bearerTokenOrgId: 6078fba4-49d9-4291-9f7b-80116aab6974
-    accessTokenUser: C4d7507eca0d56509f82db6919ec550fd1cd76dd67d125fc14e1fe9c2b24d5e10
+    bearerTokenOrgId: "6078fba4-49d9-4291-9f7b-80116aab6974"
+    accessTokenUser: "C4d7507eca0d56509f82db6919ec550fd1cd76dd67d125fc14e1fe9c2b24d5e10"
     accessTokenPass:
       secretRef: ci-secrets
       secretKey: access-token-pass
@@ -233,15 +233,15 @@ global:
       #   region: us-east-1
       #   registry: datahub
     topic:
-      metadataAuditEventName: DataHubMetadataAuditEvent_v4
-      metadataChangeEventName: DataHubMetadataChangeEvent_v4
-      failedMetadataChangeEventName: DataHubFailedMetadataChangeEvent_v4
-      datahubUsageEventName: DataHubUsageEvent_v1
-      metadataChangeLogVersionedTopic: DataHubMetadataChangeLog_Versioned_v1
-      metadataChangeLogTimeseriesTopic: DataHubMetadataChangeLog_Timeseries_v1
-      metadataChangeProposalTopic: DataHubMetadataChangeProposal_v1
-      failedMetadataChangeProposalTopic: DataHubFailedMetadataChangeProposal_v1
-      platformEventTopicName: DataHubPlatformEvent_v1
+      metadataAuditEventName: "DataHubMetadataAuditEvent_v4"
+      metadataChangeEventName: "DataHubMetadataChangeEvent_v4"
+      failedMetadataChangeEventName: "DataHubFailedMetadataChangeEvent_v4"
+      datahubUsageEventName: "DataHubUsageEvent_v1"
+      metadataChangeLogVersionedTopic: "DataHubMetadataChangeLog_Versioned_v1"
+      metadataChangeLogTimeseriesTopic: "DataHubMetadataChangeLog_Timeseries_v1"
+      metadataChangeProposalTopic: "DataHubMetadataChangeProposal_v1"
+      failedMetadataChangeProposalTopic: "DataHubFailedMetadataChangeProposal_v1"
+      platformEventTopicName: "DataHubPlatformEvent_v1"
 
   neo4j:
     host: "prerequisites-neo4j-community:7474"
