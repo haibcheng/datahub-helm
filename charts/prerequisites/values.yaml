@@ -41,5 +41,5 @@ postgresql:
   enabled: true
   auth:
     # For better security, add postgresql-secrets k8s secret with postgres-password, replication-password and password
-    existingSecret: postgresql-secrets
+    existingSecret: wdh-postgresql-secrets
 
