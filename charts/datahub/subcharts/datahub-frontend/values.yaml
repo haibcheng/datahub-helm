@@ -70,17 +70,16 @@ ingress:
 
 # OIDC auth based on https://datahubproject.io/docs/authentication/guides/sso/configure-oidc-react
 oidcAuthentication:
-  enabled: false
-  # provider: google/okta/azure  <- choose only one
-  # clientId: your-client-id
+  enabled: true
+  provider: google #google/okta/azure
+  clientId: datahub-test-client-id
   # clientSecret: your-client-secret
   # only needed if you would like to store the client secret in secret
-  # clientSecretRef:
-  #   secretRef: <secret-ref>
-  #   secretKey: <secret-key>
+  clientSecretRef:
+    secretRef: wdh-oidc-secrets
+    secretKey: oidc-client-password
   # only needed if provider is `okta`
   # oktaDomain: your-okta-domain.com
-
   # only neede if provider is `azure`
   # azureTenantId: your-azure-tenant-id
 

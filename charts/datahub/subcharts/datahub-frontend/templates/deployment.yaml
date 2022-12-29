@@ -177,9 +177,9 @@ spec:
               value: https://{{ (first $.Values.ingress.hosts).host }}
             {{- if eq .provider "google" }}
             - name: AUTH_OIDC_DISCOVERY_URI
-              value: https://accounts.google.com/.well-known/openid-configuration
+              value: https://cloudsso.cisco.com/.well-known/openid-configuration
             - name: AUTH_OIDC_SCOPE
-              value: "openid profile email"
+              value: "openid email"
             - name: AUTH_OIDC_USER_NAME_CLAIM
               value: email
             - name: AUTH_OIDC_USER_NAME_CLAIM_REGEX

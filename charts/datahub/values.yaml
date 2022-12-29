@@ -202,12 +202,12 @@ global:
     host: "https://idbrokerbts.webex.com"
     machineAccountName: "CTGWAP-DATAHUB"
     machineAccountPass:
-      secretRef: ci-secrets
+      secretRef: wdh-ci-secrets
       secretKey: machine-account-pass
     bearerTokenOrgId: "6078fba4-49d9-4291-9f7b-80116aab6974"
     accessTokenUser: "C4d7507eca0d56509f82db6919ec550fd1cd76dd67d125fc14e1fe9c2b24d5e10"
     accessTokenPass:
-      secretRef: ci-secrets
+      secretRef: wdh-ci-secrets
       secretKey: access-token-pass
 
   elasticsearch:
@@ -273,7 +273,7 @@ global:
       driver: "org.postgresql.Driver"
       username: "postgres"
       password:
-        secretRef: postgresql-secrets
+        secretRef: wdh-postgresql-secrets
         secretKey: postgres-password
       # --------------OR----------------
       #   value: password
@@ -309,7 +309,7 @@ global:
       defaultCliVersion: "0.9.5"
 
     metadata_service_authentication:
-      enabled: false
+      enabled: true
       systemClientId: "__datahub_system"
       systemClientSecret:
         secretRef: "datahub-auth-secrets"
