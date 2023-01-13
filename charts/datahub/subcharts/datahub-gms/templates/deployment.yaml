@@ -95,6 +95,26 @@ spec:
               value: {{ .Values.global.kafka.topic.failedMetadataChangeProposal }}
             - name: PLATFORM_EVENT_TOPIC_NAME
               value: {{ .Values.global.kafka.topic.platformEvent }}
+            - name: CI_WDH_HOST
+              value: {{ .Values.global.ci.host }}
+            - name: CI_WDH_SCOPE
+              value: {{ .Values.global.ci.scope }}
+            - name: CI_WDH_ORG_ID
+              value: {{ .Values.global.ci.bearerTokenOrgId }}
+            - name: CI_WDH_MACHINE_ACCT_NAME
+              value: {{ .Values.global.ci.machineAccountName }}
+            - name: CI_WDH_MACHINE_ACCT_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.global.ci.machineAccountPass.secretRef }}
+                  key: {{ .Values.global.ci.machineAccountPass.secretKey }}
+            - name: CI_WDH_CLIENT_ID
+              value: {{ .Values.global.ci.accessTokenUser }}
+            - name: CI_WDH_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.global.ci.accessTokenPass.secretRef }}
+                  key: {{ .Values.global.ci.accessTokenPass.secretKey }}
             {{- if .Values.global.datahub.monitoring.enablePrometheus }}
             - name: ENABLE_PROMETHEUS
               value: "true"
