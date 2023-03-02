@@ -56,8 +56,7 @@ affinity: {}
 
 actions:
   kafkaAutoOffsetPolicy: "latest"
-  enableTypes: system,udp,cud # system,udp,cud
-  profilesActive: qa
+  files: /etc/datahub/actions/executor.yaml,/etc/datahub/actions/qa/udp_dataset.yaml,/etc/datahub/actions/qa/cud_datasource.yaml
 
 global:
 

@@ -12,7 +12,7 @@ replicaCount: 2
 ## Image Info
 ## ref: https://hub.docker.com/r/confluentinc/cp-schema-registry/
 image: registry-qa.webex.com/mats/cp-schema-registry
-imageTag: 7.2.0
+imageTag: 7.2.0.230302
 
 ## Specify a imagePullPolicy
 ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images

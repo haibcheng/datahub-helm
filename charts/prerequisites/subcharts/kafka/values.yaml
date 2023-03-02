@@ -11,7 +11,7 @@ brokers: 3
 
 ## Image Info
 image: registry-qa.webex.com/mats/datahub-kafka
-imageTag: 3.3.1
+imageTag: 3.3.2.230302
 
 ## Specify a imagePullPolicy
 ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images

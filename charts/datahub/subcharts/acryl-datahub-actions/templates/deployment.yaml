@@ -63,11 +63,9 @@ spec:
               value: {{ .Values.global.kafka.topic.metadataChangeLogVersioned }}
             - name: PLATFORM_EVENT_TOPIC_NAME
               value: {{ .Values.global.kafka.topic.platformEvent }}
-            - name: DATAHUB_ACTIONS_TYPES
-              value: {{ .Values.actions.enableTypes }}
-            - name: DATAHUB_ACTIONS_PROFILES_ACTIVE
-              value: {{ .Values.actions.profilesActive }}
-            {{- if contains "cud" .Values.actions.enableTypes }}
+            - name: DATAHUB_ACTION_FILES
+              value: {{ .Values.actions.files }}
+            {{- if contains "cud" .Values.actions.files }}
             - name: CI_MACHINE_NAME
               value: {{ .Values.global.ci.machineAccountName }}
             - name: CI_MACHINE_PASS

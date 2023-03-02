@@ -5,7 +5,7 @@ datahub-gms:
   replicaCount: 2
   image:
     repository: registry-qa.webex.com/mats/datahub-gms
-    tag: "0.9.0.230202"
+    tag: 0.9.0.230301
     pullPolicy: Always
     # tag: "v0.9.3 # defaults to .global.datahub.version
   # Optionally set a GMS specific SQL login (defaults to global login)
@@ -37,7 +37,7 @@ datahub-frontend:
   replicaCount: 2
   image:
     repository: registry-qa.webex.com/mats/datahub-frontend
-    tag: "0.9.0.230202"
+    tag: 0.9.0.230301
     pullPolicy: Always
     # tag: "v0.9.3" # # defaults to .global.datahub.version
 
@@ -63,7 +63,7 @@ acryl-datahub-actions:
   replicaCount: 2
   image:
     repository: registry-qa.webex.com/mats/datahub-actions
-    tag: "0.0.10.230111"
+    tag: 0.0.10.230302
     pullPolicy: Always
   resources:
     limits:
