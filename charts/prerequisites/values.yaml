@@ -10,7 +10,7 @@ schemaRegistry:
   enabled: true
 
 elasticsearch:
-  enabled: true   # set this to false, if you want to provide your own ES instance.
+  enabled: false   # set this to false, if you want to provide your own ES instance.
   replicas: 3
   minimumMasterNodes: 1
   # Set replicas to 1 and uncomment this to allow the instance to be scheduled on
@@ -41,7 +41,7 @@ elasticsearch:
   #       storage: 100M
 
 postgresql:
-  enabled: true
+  enabled: false
   auth:
     # For better security, add postgresql-secrets k8s secret with postgres-password, replication-password and password
     existingSecret: wdh-postgresql-secrets
