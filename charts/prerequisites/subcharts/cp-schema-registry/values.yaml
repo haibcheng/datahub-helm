@@ -40,7 +40,8 @@ heapOptions: "-Xms512M -Xmx512M"
 ## bootstrapServers: "PLAINTEXT://dozing-prawn-kafka-headless:9092"
 ## Charts uses Kafka Coordinator Master Election: https://docs.confluent.io/current/schema-registry/docs/design.html#kafka-coordinator-master-election
 kafka:
-  enabled: true
+  enabled: false
+  bootstrapServers: "PLAINTEXT://local-kafka.kafka:9092"
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

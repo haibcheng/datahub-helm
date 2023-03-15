@@ -2,7 +2,6 @@
 # Copy this file and update to the configuration of choice
 kafka:
   enabled: false
-  bootstrapServers: "local-kafka.kafka:9092"
 
 zookeeper:
   enabled: false
