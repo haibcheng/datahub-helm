@@ -5,7 +5,7 @@ datahub-gms:
   replicaCount: 2
   image:
     repository: registry-qa.webex.com/mats/datahub-gms
-    tag: 0.9.0.230301
+    tag: 0.9.0.230313
     pullPolicy: Always
     # tag: "v0.9.3 # defaults to .global.datahub.version
   # Optionally set a GMS specific SQL login (defaults to global login)
@@ -37,7 +37,7 @@ datahub-frontend:
   replicaCount: 2
   image:
     repository: registry-qa.webex.com/mats/datahub-frontend
-    tag: 0.9.0.230301
+    tag: 0.9.0.230313
     pullPolicy: Always
     # tag: "v0.9.3" # # defaults to .global.datahub.version
 
@@ -63,7 +63,7 @@ acryl-datahub-actions:
   replicaCount: 2
   image:
     repository: registry-qa.webex.com/mats/datahub-actions
-    tag: 0.0.10.230302
+    tag: 0.0.10.230308
     pullPolicy: Always
   resources:
     limits:
@@ -222,9 +222,7 @@ global:
 
   kafka:
     bootstrap:
-      server: "prerequisites-kafka:9092"
-    zookeeper:
-      server: "prerequisites-zookeeper:2181"
+      server: "local-kafka.kafka:9092"
     ## For AWS MSK set this to a number larger than 1
     # partitions: 3
     # replicationFactor: 3
