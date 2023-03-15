@@ -25,12 +25,12 @@ datahub-gms:
       kubernetes.io/ingress.class: ingress-internal
       cert-manager.io/cluster-issuer: letsencrypt-prod
     hosts:
-      - host: datahub-gms.int.wbx3op-sjcdev01.dev.infra.webex.com
+      - host: datahub-gms.int.wbx3op-dfwtmp05.dev.infra.webex.com
         paths: [ / ]
     tls:
       - secretName: datahub-gms-int-crt-internal
         hosts:
-          - datahub-gms.int.wbx3op-sjcdev01.dev.infra.webex.com
+          - datahub-gms.int.wbx3op-dfwtmp05.dev.infra.webex.com
 
 datahub-frontend:
   enabled: true
@@ -51,12 +51,12 @@ datahub-frontend:
       kubernetes.io/ingress.class: ingress-internal
       cert-manager.io/cluster-issuer: letsencrypt-prod
     hosts:
-      - host: datahub.int.wbx3op-sjcdev01.dev.infra.webex.com
+      - host: datahub.int.wbx3op-dfwtmp05.dev.infra.webex.com
         paths: [ / ]
     tls:
       - secretName: datahub-int-crt-internal
         hosts:
-          - datahub.int.wbx3op-sjcdev01.dev.infra.webex.com
+          - datahub.int.wbx3op-dfwtmp05.dev.infra.webex.com
 
 acryl-datahub-actions:
   enabled: true
