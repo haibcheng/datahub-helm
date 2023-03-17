@@ -345,6 +345,39 @@ entries:
     version: 0.2.125020
   datahub-prerequisites:
   - apiVersion: v2
+    created: "2023-03-17T05:41:23.322142555Z"
+    dependencies:
+    - condition: kafka.enabled
+      name: kafka
+      repository: file://./subcharts/kafka
+      version: 0.0.1
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: file://./subcharts/zookeeper
+      version: 0.0.1
+    - condition: schemaRegistry.enabled
+      name: cp-schema-registry
+      repository: file://./subcharts/cp-schema-registry
+      version: 0.0.1
+    - condition: elasticsearch.enabled
+      name: elasticsearch
+      repository: https://helm.elastic.co
+      version: 7.17.3
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 11.2.6
+    description: A Helm chart for packages that Datahub depends on
+    digest: e3bc31b98e6cc6da4d78755b162911f45eb0662f53669af28ce963272594d661
+    maintainers:
+    - email: datahub@acryl.io
+      name: DataHub
+    name: datahub-prerequisites
+    type: application
+    urls:
+    - https://github.com/haibcheng/datahub-helm/releases/download/datahub-prerequisites-0.0.12029/datahub-prerequisites-0.0.12029.tgz
+    version: 0.0.12029
+  - apiVersion: v2
     created: "2023-03-15T06:37:39.808400188Z"
     dependencies:
     - condition: kafka.enabled
@@ -542,4 +575,4 @@ entries:
     urls:
     - https://github.com/haibcheng/datahub-helm/releases/download/datahub-prerequisites-0.0.12020/datahub-prerequisites-0.0.12020.tgz
     version: 0.0.12020
-generated: "2023-03-15T07:22:53.647915157Z"
+generated: "2023-03-17T05:41:23.322194056Z"
